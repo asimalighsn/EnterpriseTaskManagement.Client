@@ -5,6 +5,9 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import Projects from './pages/Projects'
+import ProjectDetail from './pages/ProjectDetail'
+import ProjectCreate from './pages/ProjectCreate'
+import ProjectEdit from './pages/ProjectEdit'
 import './App.css'
 
 function App() {
@@ -29,6 +32,30 @@ path = "/projects"
 element = {
               < ProtectedRoute >
     <Projects />
+    </ProtectedRoute>
+            }
+          />
+    < Route
+path = "/projects/new"
+element = {
+              < ProtectedRoute >
+    <ProjectCreate />
+    </ProtectedRoute>
+            }
+          />
+    < Route
+path = "/projects/:id"
+element = {
+              < ProtectedRoute >
+    <ProjectDetail />
+    </ProtectedRoute>
+            }
+          />
+    < Route
+path = "/projects/:id/edit"
+element = {
+              < ProtectedRoute >
+    <ProjectEdit />
     </ProtectedRoute>
             }
           />
